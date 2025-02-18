@@ -2,4 +2,4 @@
 # This script groups visitors by IP and HTTP status code from Apache logs,
 # counts occurrences, and displays them ordered by occurrence count
 
-awk '{print $1, $9}' apache-access.log | awk '{ip[$1" "$2]++} END {for (i in ip) print ip[i], i}' | sort -rn | awk '{print $1, $2, $3}'
+awk '{print $1, $9}' apache-access.log | awk '{ip[$1" "$2]++} END {for (i in ip) print ip[i], i}' | sort -rn | awk '{print "   " $1, $2, $3}'
