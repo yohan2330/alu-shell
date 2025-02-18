@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script displays a list of currently running processes for all users,
+# including those without a TTY, in a user-oriented format, showing process hierarchy
+
+# Use ps to list processes with the specified requirements
+ps -e -o pid,ppid,user,tty,start_time,cmd --forest
