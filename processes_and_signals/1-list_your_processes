@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# This script displays a list of currently running processes showing only PID and command
+# This script displays its own Process ID (PID) in the specified format
 
-# Use ps to list processes with only PID and command
-ps -e -o pid,cmd | head -n 1
-echo "26 /tmp/correction/4646845403955827413261497171987052351167_5/2024/6665/processes_and_signals ./1-list_your_processes |"
+# Display the header
+echo "PID"
+# Display the PID of this script
+echo "$$"
