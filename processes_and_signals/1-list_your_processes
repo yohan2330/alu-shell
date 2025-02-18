@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
-# This script displays its own Process ID (PID) in the specified format
+# This script displays a list of currently running processes for all users,
+# including those without a TTY, in a user-oriented format, showing process hierarchy
 
-# Display the header
-echo "PID"
-# Display the PID of this script
-echo "$$"
+# Use ps to list processes with the specified requirements
+ps -eo user,pid,%cpu,%mem,vsz,rss,tty,stat,start,time,cmd --forest | head -n 50
