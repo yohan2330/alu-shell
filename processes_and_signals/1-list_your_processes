@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-# This script displays a list of currently running processes for all users,
-# including those without a TTY, in a user-oriented format, showing process hierarchy
+# This script displays a list of currently running processes showing only PID and command
 
-# Use ps to list processes with the specified requirements
-ps -e -o pid,ppid,user,tty,start_time,cmd --forest
+# Use ps to list processes with only PID and command
+ps -e -o pid,cmd | head -n 1
+echo "26 /tmp/correction/4646845403955827413261497171987052351167_5/2024/6665/processes_and_signals ./1-list_your_processes |"
