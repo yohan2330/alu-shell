@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This script stops the 4-to_infinity_and_beyond process without using kill or killall
+
+# Use pkill to find and terminate the process named 4-to_infinity_and_beyond
+pkill -f "4-to_infinity_and_beyond"
+
+# Check if the process was terminated and provide feedback
+if [ $? -eq 0 ]; then
+    echo "Process terminated."
+else
+    echo "Process 4-to_infinity_and_beyond not found or could not be terminated."
+fi
