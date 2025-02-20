@@ -9,5 +9,5 @@ if [ -n "$pid" ]; then
     kill -15 "$pid"
     echo "Process terminated."
 else
-    echo "Process 4-to_infinity_and_beyond not found."
+    echo "Process 4-to_infinity_and_beyond not found or could not be terminated."
 fi
